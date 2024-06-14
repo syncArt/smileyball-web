@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "smileyBall_backend": {
+      "main": "src/smileyBall_backend/main.mo",
+      "type": "motoko"
+    },
+    "smileyBall_frontend": {
+      "dependencies": [
+        "smileyBall_backend"
+      ],
+      "source": [
+        "src/smileyBall_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "smileyBall_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
