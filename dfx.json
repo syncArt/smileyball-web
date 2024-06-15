@@ -9,10 +9,9 @@
         "smileyBall_backend"
       ],
       "source": [
-        "src/smileyBall_frontend/dist"
+        "src/smileyBall_frontend/out"
       ],
-      "type": "assets",
-      "workspace": "smileyBall_frontend"
+      "type": "assets"
     }
   },
   "defaults": {
