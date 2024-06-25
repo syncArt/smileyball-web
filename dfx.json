@@ -2,7 +2,8 @@
   "canisters": {
     "smileyBall_backend": {
       "main": "src/smileyBall_backend/main.mo",
-      "type": "motoko"
+      "type": "motoko",
+      "id": "bd3sg-teaaa-aaaaa-qaaba-cai"
     },
     "smileyBall_frontend": {
       "dependencies": [
@@ -11,7 +12,20 @@
       "source": [
         "src/smileyBall_frontend/out"
       ],
-      "type": "assets"
+      "type": "assets",
+      "id": "be2us-64aaa-aaaaa-qaabq-cai"
+    },
+    "internet_identity": {
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "frontend": {},
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "id": "bkyz2-fmaaa-aaaaa-qaaaq-cai",
+      "type": "custom",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
     }
   },
   "defaults": {
