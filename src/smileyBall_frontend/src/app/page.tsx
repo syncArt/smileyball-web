@@ -6,8 +6,8 @@ import { RenderEmoji } from "@/components/Emoji";
 import { SmileyBallConfigurable } from "@/modules/SmileyBallConfigurable";
 import { NftsShowroom } from "@/modules/NftsShowroom";
 import { useAuth } from "@/hooks/useAuthClient";
-import LoggedIn from "@/components/LoggedIn";
-import LoggedOut from "@/components/LoggedOut";
+import LoggedIn from "@/components/buttons/LoggedIn";
+import LoggedOut from "@/components/buttons/LoggedOut";
 
 export default function Home() {
   const { isAuthenticated, identity } = useAuth();

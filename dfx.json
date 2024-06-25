@@ -3,7 +3,10 @@
     "smileyBall_backend": {
       "main": "src/smileyBall_backend/main.mo",
       "type": "motoko",
-      "id": "bd3sg-teaaa-aaaaa-qaaba-cai"
+      "id": "bd3sg-teaaa-aaaaa-qaaba-cai",
+      "declarations": {
+        "node_compatibility": true
+      }
     },
     "smileyBall_frontend": {
       "dependencies": [

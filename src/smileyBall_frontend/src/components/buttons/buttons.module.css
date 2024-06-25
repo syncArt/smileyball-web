@@ -1,0 +1,13 @@
+.loggedIn {
+
+}
+
+.loggedOut {
+    display: flex;
+    margin-left: 150px;
+    width: auto;
+    border: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+}

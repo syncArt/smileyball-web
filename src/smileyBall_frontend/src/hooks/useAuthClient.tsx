@@ -2,7 +2,7 @@
 
 import { AuthClient } from "@dfinity/auth-client";
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { canisterId, createActor } from "@/declarations/smileyBall_backend";
+import { canisterId, createActor } from "../../../declarations/smileyBall_backend";
 
 const AuthContext = createContext<any>(null);
 
@@ -91,7 +91,7 @@ export const useAuthClient = (options = defaultOptions) => {
       agentOptions: {
         identity,
       },
-    });
+    } as any);
 
     setWhoamiActor(actor);
   }
