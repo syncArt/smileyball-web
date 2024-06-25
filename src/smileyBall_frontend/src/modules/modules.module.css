@@ -1,0 +1,171 @@
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.nftShowroomWrapper {
+  display: flex;
+  width: 100%;
+  /*flex-direction: column;*/
+  /*transform: scale(0.5);*/
+  gap: 20px;
+}
+
+.nftShowroomWrapperBlurWrapper {
+  display: flex;
+  position: relative;
+}
+
+.nftShowroomWrapperBlurred {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  filter: blur(10px);
+}
+
+.smilingEmojiBoxRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  line-height: 11px;
+}
+@media (min-width: 700px) {
+  .smilingEmojiBoxRow {
+    line-height: 11px;
+  }
+}
+
+.emojiArtPixelMain {
+  /*animation: rotateY 1s infinite linear;*/
+  filter: blur(2px);
+}
+
+.emojiArtPixelBackground {
+  /*animation: rotateY 1s infinite linear;*/
+  filter: blur(2px);
+}
+
+.emojiArtPixel {
+}
+
+@keyframes rotateY {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.createYourOwnLeft {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  left: -40px;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.createYourOwnTop {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  top: -50px;
+  transform: rotate(90deg) translateX(-50%);
+  pointer-events: none;
+}
+@media (min-width: 700px) {
+  .createYourOwnTop {
+    top: -40px;
+  }
+}
+
+.createYourOwnRight {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  left: 40px;
+  transform: rotate(180deg) translateX(-50%);
+  pointer-events: none;
+}
+
+.configurePaletteWrapper {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  justify-content: flex-start;
+  transform: translateY(77px);
+}
+
+.configurePalette {
+  display: flex;
+  width: 100%;
+  gap: 4px;
+  position: relative;
+}
+
+.palettePicker {
+  display: flex;
+  background: none;
+  border: none;
+  outline: none;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.palettePickerActive {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  font-size: 22px;
+  animation: rotateY 5s infinite linear;
+  /*border: 3px dashed deeppink;*/
+  z-index: 2;
+}
+
+@keyframes rotateY {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.palettePickerActive .palettePickerActive::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  border: 3px dashed black;
+  border-radius: 50%;
+  animation: rotateY 1s infinite linear;
+}
+
+@keyframes rotateY {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.palettePickerPickerComponent {
+  display: flex;
+  position: absolute;
+  transform: translateY(70px);
+}

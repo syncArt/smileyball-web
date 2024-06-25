@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.pickerWrapper {
+  display: flex;
+  position: absolute;
+  top: 50px;
+}
+
+.navBar {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.navBarElement {
+  display: flex;
+}
+
+.emojisRow{
+  display: flex;
+  height: 16px;
+}
