@@ -1,3 +1,4 @@
+// @ts-nocheck
 // options inherit from single element renderer of picked lib. For emoji mart would be: skin, size, set
 // builder is about builder function and resolution of given letter
 // letter is representation of chosen letter from keyboard

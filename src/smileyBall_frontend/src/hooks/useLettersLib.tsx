@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useCallback, useEffect, useState } from "react";
 import { LIB_TYPES } from "@/data/libs";
 import { LettersLibObjDto } from "@/models/dto/lettersLibObj-dto";

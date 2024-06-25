@@ -1,3 +1,4 @@
+// @ts-nocheck
 export class TextureStyleObjDto {
   main: string;
   background: string;

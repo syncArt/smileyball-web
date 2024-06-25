@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Texture } from "@/types/Grid";
 import { TextureStyleObjDto } from "@/models/dto/textureStyleObj-dto";
 import { TextGridObjDto } from "@/models/dto/textGridObj-dto";

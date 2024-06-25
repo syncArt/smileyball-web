@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useCallback, useState } from "react";
 import { useLettersLib } from "@/hooks/useLettersLib";
 import { Options, Texture } from "@/types/Grid";

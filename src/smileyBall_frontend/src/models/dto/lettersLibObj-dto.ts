@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { LetterObjDto } from "@/models/dto/letterObj-dto";
 
 

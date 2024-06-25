@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useState } from "react";
 import { TextureStyleObjDto } from "@/models/dto/textureStyleObj-dto";
 

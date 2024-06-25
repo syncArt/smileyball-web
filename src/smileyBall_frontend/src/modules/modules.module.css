@@ -42,15 +42,16 @@
 
 .emojiArtPixelMain {
   /*animation: rotateY 1s infinite linear;*/
-  filter: blur(2px);
+  /*filter: blur(2px);*/
 }
 
 .emojiArtPixelBackground {
   /*animation: rotateY 1s infinite linear;*/
-  filter: blur(2px);
+  /*filter: blur(2px);*/
 }
 
 .emojiArtPixel {
+
 }
 
 @keyframes rotateY {

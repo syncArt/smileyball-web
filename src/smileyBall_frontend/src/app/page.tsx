@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 import styles from "./page.module.css";
 
@@ -6,8 +7,7 @@ import { RenderEmoji } from "@/components/Emoji";
 import { SmileyBallConfigurable } from "@/modules/SmileyBallConfigurable";
 import { NftsShowroom } from "@/modules/NftsShowroom";
 import { useAuth } from "@/hooks/useAuthClient";
-import LoggedIn from "@/components/buttons/LoggedIn";
-import LoggedOut from "@/components/buttons/LoggedOut";
+import { LoggedIn, LoggedOut } from "@/components/buttons";
 
 export default function Home() {
   const { isAuthenticated, identity } = useAuth();

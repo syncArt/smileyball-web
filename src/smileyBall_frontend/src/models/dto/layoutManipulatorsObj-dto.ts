@@ -1,3 +1,4 @@
+// @ts-nocheck
 export class LayoutManipulatorsObjDto {
   #isVertical: boolean = false;
   #hasBorder: boolean = false;

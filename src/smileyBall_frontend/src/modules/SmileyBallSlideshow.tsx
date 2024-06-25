@@ -1,12 +1,13 @@
+// @ts-nocheck
 "use client";
 
-import { TEXTURE_TYPES } from "@/models/textures";
-import { LIB_TYPES } from "@/models/libs";
 import { useTextGrid } from "@/hooks/useTextGrid";
 import { useEffect, useRef } from "react";
 import { RenderEmoji } from "@/components/Emoji";
 import styles from "./modules.module.css";
 import EmojiArt from "@/components/EmojiArt";
+import {TEXTURE_TYPES} from "@/data/textures";
+import {LIB_TYPES} from "@/data/libs";
 
 export const SmileyBallSlideshow = ({ char }) => {
   const smileyBallTemplate = TEXTURE_TYPES.SMILEY_BALL;

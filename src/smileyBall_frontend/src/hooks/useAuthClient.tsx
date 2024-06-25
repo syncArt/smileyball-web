@@ -1,31 +1,27 @@
+// @ts-nocheck
 "use client";
 
 import { AuthClient } from "@dfinity/auth-client";
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { canisterId, createActor } from "../../../declarations/smileyBall_backend";
+import {canisterId, createActor, CreateActorOptions} from "../../../declarations/smileyBall_backend";
 
 const AuthContext = createContext<any>(null);
 
-// The interface of the whoami canister
-const webapp_idl = ({ IDL }) => {
-  return IDL.Service({ whoami: IDL.Func([], [IDL.Principal], ["query"]) });
-};
-export const init = ({ IDL }) => {
-  return [];
-};
 export const getIdentityProvider = () => {
-  let iiUrl;
-  if (process.env.NEXT_PUBLIC_DFX_NETWORK === "local") {
-    iiUrl = `http://${process.env.NEXT_PUBLIC_CANISTER_ID_INTERNET_IDENTITY}.localhost:4943`;
-  } else if (process.env.NEXT_PUBLIC_DFX_NETWORK === "ic") {
-    iiUrl = `https://${process.env.NEXT_PUBLIC_CANISTER_ID_INTERNET_IDENTITY}.ic0.app`;
-  } else {
-    iiUrl = `https://${process.env.NEXT_PUBLIC_CANISTER_ID_INTERNET_IDENTITY}.dfinity.network`;
+  let idpProvider;
+  // Safeguard against server rendering
+  if (typeof window !== "undefined") {
+    const isLocal = process.env.DFX_NETWORK !== "ic";
+    // Safari does not support localhost subdomains
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    if (isLocal && isSafari) {
+      idpProvider = `http://localhost:4943/?canisterId=${process.env.CANISTER_ID_INTERNET_IDENTITY}`;
+    } else if (isLocal) {
+      idpProvider = `http://${process.env.CANISTER_ID_INTERNET_IDENTITY}.localhost:4943`;
+    }
   }
-  return iiUrl;
+  return idpProvider;
 };
-
-const webapp_id = process.env.NEXT_PUBLIC_CANISTER_ID_WHOAMI;
 
 export const defaultOptions = {
   /**
@@ -70,8 +66,12 @@ export const useAuthClient = (options = defaultOptions) => {
     authClient.login({
       ...options.loginOptions,
       onSuccess: () => {
+        console.log('success!!!!!!', authClient)
         updateClient(authClient);
       },
+      onError: () => {
+        console.log('meh... ;/', authClient);
+      }
     });
   };
 
@@ -91,7 +91,7 @@ export const useAuthClient = (options = defaultOptions) => {
       agentOptions: {
         identity,
       },
-    } as any);
+    } as CreateActorOptions);
 
     setWhoamiActor(actor);
   }

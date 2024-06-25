@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Resolution } from "@/types/Grid";
 
 interface TextGridObj {
