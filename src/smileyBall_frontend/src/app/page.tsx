@@ -7,7 +7,7 @@ import { SmileyBallConfigurable } from "@/modules/SmileyBallConfigurable";
 import { NftsShowroom } from "@/modules/NftsShowroom";
 import { useAuth } from "@/hooks/useAuthClient";
 import { LoggedIn, LoggedOut } from "@/components/buttons";
-import {ProfileModal} from "@/components/ProfileModal";
+import { ProfileModal } from "@/components/ProfileModal";
 
 export default function Home() {
   const { isAuthenticated } = useAuth();
@@ -37,16 +37,14 @@ export default function Home() {
         {/*<NftsShowroom />*/}
         <div className={styles.bottomBar}>
           <div className={styles.bottomElement}>
-            <a href="https://a4gq6-oaaaa-aaaab-qaa4q-cai.raw.icp0.io/?id=e45g2-taaaa-aaaan-qmn5q-cai">
-              <Image alt="coin" src="/coin.svg" width="150" height="50" />
+            {false ? <ProfileModal /> : <LoggedOut />}
+          </div>
+          <div className={styles.navigation}>
+            <a className={styles.navigationElement} href="https://a4gq6-oaaaa-aaaab-qaa4q-cai.raw.icp0.io/?id=e45g2-taaaa-aaaan-qmn5q-cai">
+              <RenderEmoji id="💎" options={{ size: "45px" }} />
             </a>
-          </div>
-          <div className={styles.bottomElement}>
-            {isAuthenticated ? <ProfileModal /> : <LoggedOut />}
-          </div>
-          <div className={styles.bottomElement}>
-            <a href="/SmileyBall.pdf">
-              <Image alt="watwat" src="/watwat.svg" width="150" height="50" />
+            <a className={styles.navigationElement} href="/SmileyBall.pdf">
+              <RenderEmoji id="pirate_flag" options={{ size: "45px" }} />
             </a>
           </div>
         </div>

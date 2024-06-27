@@ -22,7 +22,8 @@
 .profileBox {
   display: flex;
   position: relative;
-  width: 100%;
+  justify-content: center;
+  min-width: 340px;
   padding: 0 30px;
   max-width: 340px;
   background: #e7ff40;
@@ -38,12 +39,17 @@
   justify-content: center;
   position: absolute;
   font-size: 30px;
+  font-family: Sequel100Black-96;
   top: 0;
   left: 0;
-  width: 100%;
-  font-family: Sequel100Black-96;
   transform: translateY(calc(-100% - 10px));
   cursor: pointer;
+}
+
+@media (min-width: 700px) {
+  .profileBox:before {
+    width: 100%;
+  }
 }
 
 .profileBoxTop {

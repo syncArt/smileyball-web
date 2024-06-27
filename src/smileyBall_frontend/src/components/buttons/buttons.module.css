@@ -1,32 +1,41 @@
 .loggedInWrapper {
-display: flex;
-    flex-direction: column;
-    margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
 }
 
-.loggedIn{
-    display: flex;
-    outline: none;
-    border: none;
-    background: none;
+.loggedIn {
+  display: flex;
+  outline: none;
+  border: none;
+  background: none;
 }
 
-.loggedInText{
-    display: flex;
-    flex-direction: column;
+.loggedInText {
+  display: flex;
+  flex-direction: column;
 }
 
 .loggedInText p {
-    display: flex;
-    font-size: 14px;
+  display: flex;
+  font-size: 14px;
 }
 
 .loggedOut {
-    display: flex;
-    margin-left: 150px;
-    width: auto;
-    border: none;
-    background: transparent;
-    outline: none;
-    cursor: pointer;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: white;
+  font-family: Sequel100Black-96;
+}
+
+@media (min-width: 700px) {
+  .loggedOut {
+    justify-content: center;
+  }
 }

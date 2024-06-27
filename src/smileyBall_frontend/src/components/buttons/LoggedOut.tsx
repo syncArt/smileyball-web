@@ -15,7 +15,7 @@ const LoggedOut = () => {
       id="loginButton"
       onClick={login}
     >
-      <Image alt="login" src="/login.svg" width="150" height="50" />
+      LOGIN
     </button>
   );
 };
