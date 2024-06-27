@@ -1,4 +1,3 @@
-// @ts-nocheck
 import styles from "./modules.module.css";
 import { useTextGrid } from "@/hooks/useTextGrid";
 import { TEXTURE_TYPES } from "@/data/textures";

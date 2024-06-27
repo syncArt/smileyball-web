@@ -1,0 +1,186 @@
+.container{
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+  z-index: 2;
+  transform: translateY(calc(100% + 5px));
+  transition: all ease-in 0.3s;
+}
+
+.wrapper:hover {
+  transform: translateY(0);
+}
+
+.profileBox {
+  display: flex;
+  position: relative;
+  width: 100%;
+  padding: 0 30px;
+  max-width: 340px;
+  background: #e7ff40;
+  border-radius: 10px;
+  flex-direction: column;
+  border: 2px solid white;
+  margin-top: 10px;
+}
+
+.profileBox::before {
+  content: "Profile";
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  font-size: 30px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-family: Sequel100Black-96;
+  transform: translateY(calc(-100% - 10px));
+  cursor: pointer;
+}
+
+.profileBoxTop {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.avatar {
+  display: flex;
+  flex-shrink: 0;
+  font-size: 64px;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-left: 15px;
+}
+
+.profileId {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  color: black;
+  margin-top: 15px;
+}
+
+.profileId > input {
+  display: flex;
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  justify-content: flex-start;
+  font-family: Sequel100Black-55;
+  font-size: 14px;
+  text-overflow: ellipsis;
+
+  /* Needed to make it work */
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.profileProfs {
+  display: flex;
+  gap: 3px;
+  width: 100%;
+  justify-content: flex-start;
+  font-size: 14px;
+}
+
+.profileBoxBottom {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  padding: 5px 0;
+  margin-top: -14px;
+}
+
+.collapser {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
+}
+
+.collapserArrow {
+  cursor: pointer;
+}
+
+.logoutButton {
+  display: flex;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  align-items: center;
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: Sequel100Black-55;
+}
+
+.ballBalance {
+  display: flex;
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  color: black;
+  font-size: 14px;
+  height: 100%;
+  align-items: center;
+  font-family: Sequel100Black-55;
+  transition: all ease-in 0.3s;
+}
+
+.ballBalanceVisible {
+  opacity: 1;
+}
+
+.navigation {
+  display: flex;
+  width: 100%;
+  height: 0;
+  visibility: hidden;
+  transition: all ease-in 0.3s;
+}
+
+.navigationFullSize {
+  height: 100px;
+  visibility: visible;
+}
+
+.navigationList {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  list-style: none;
+}
+
+.navigationListItem {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  font-family: Sequel100Black-55;
+  color: #e2e2e2;
+  font-size: 14px;
+  text-decoration: line-through;
+  cursor:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>❌</text></svg>")
+      16 0,
+    auto;
+}

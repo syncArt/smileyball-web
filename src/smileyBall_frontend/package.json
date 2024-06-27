@@ -6,7 +6,8 @@
     "dev": "NEXT_DEBUG=true next dev",
     "build": "next build",
     "start": "npx serve@latest out",
-    "lint": "next lint"
+    "lint": "next lint",
+    "tscCheck": "tsc"
   },
   "dependencies": {
     "@dfinity/agent": "^1.4.0",
@@ -23,14 +24,13 @@
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.3",
     "next": "14.2.3",
-    "ramda": "^0.30.1",
     "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "typescript": "5.4.5"
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
     "@types/ramda": "^0.30.0",
     "prettier": "^3.3.1",
-    "sass": "^1.77.4"
+    "sass": "^1.77.4",
+    "typescript": "5.4.5"
   }
 }

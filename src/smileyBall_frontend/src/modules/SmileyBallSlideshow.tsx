@@ -1,28 +1,30 @@
-// @ts-nocheck
 "use client";
 
 import { useTextGrid } from "@/hooks/useTextGrid";
 import { useEffect, useRef } from "react";
-import { RenderEmoji } from "@/components/Emoji";
 import styles from "./modules.module.css";
 import EmojiArt from "@/components/EmojiArt";
-import {TEXTURE_TYPES} from "@/data/textures";
-import {LIB_TYPES} from "@/data/libs";
+import { TEXTURE_TYPES } from "@/data/textures";
+import { LIB_TYPES } from "@/data/libs";
+
+type IntervalRefSlideshow = {
+  intervalRef: null | NodeJS.Timeout;
+  counter: number;
+};
 
 export const SmileyBallSlideshow = ({ char }) => {
   const smileyBallTemplate = TEXTURE_TYPES.SMILEY_BALL;
   const PIXELMOJIS = LIB_TYPES.PIXELMOJIS;
 
-  const [
-    {
-      lib: emojisLib,
-      letterOptions: emojisLetterOptions,
-      palette: emojiPalette,
-    },
-    { changeEmoji: changeEmojiSmileyBall },
-  ] = useTextGrid(smileyBallTemplate, PIXELMOJIS);
+  const [{ palette }, { changeEmoji: changeEmojiSmileyBall }] = useTextGrid(
+    smileyBallTemplate,
+    PIXELMOJIS,
+  );
 
-  const intervalRef = useRef({ intervalRef: null, counter: 0 });
+  const intervalRef = useRef<IntervalRefSlideshow>({
+    intervalRef: null,
+    counter: 0,
+  });
 
   useEffect(() => {
     const BackgroundEmojis = ["💎", "🦄", "♾️", "🔥"];
@@ -33,7 +35,7 @@ export const SmileyBallSlideshow = ({ char }) => {
       clearInterval(intervalRef.current?.intervalRef);
     }
 
-    if (emojiPalette && Object.values(emojiPalette).length > 0) {
+    if (palette && Object.values(palette).length > 0) {
       intervalRef.current.intervalRef = setInterval(() => {
         changeEmojiSmileyBall(
           "background",
@@ -53,11 +55,11 @@ export const SmileyBallSlideshow = ({ char }) => {
         clearInterval(intervalRef.current?.intervalRef);
       }
     };
-  }, [emojiPalette, changeEmojiSmileyBall]);
+  }, [palette, changeEmojiSmileyBall]);
 
   return (
     <section className={styles.contentWrapper}>
-      <EmojiArt char={char} lib={emojisLib} charOptions={emojisLetterOptions} />
+      <EmojiArt char={char} />
     </section>
   );
 };

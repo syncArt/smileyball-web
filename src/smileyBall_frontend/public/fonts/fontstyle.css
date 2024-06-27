@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Sequel100Black-55';
+    src: url('./Sequel100Black-55.ttf') format('truetype');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sequel100Black-96';
+    src: url('./Sequel100Black-96.ttf') format('truetype');
+    font-weight: normal;
+    font-display: swap;
+}
