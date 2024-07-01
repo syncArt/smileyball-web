@@ -6,8 +6,8 @@ import { RenderEmoji } from "@/components/Emoji";
 import { SmileyBallConfigurable } from "@/modules/SmileyBallConfigurable";
 import { NftsShowroom } from "@/modules/NftsShowroom";
 import { useAuth } from "@/hooks/useAuthClient";
-import { LoggedIn, LoggedOut } from "@/components/buttons";
 import { ProfileModal } from "@/components/ProfileModal";
+import LoggedOut from "@/components/buttons/LoggedOut";
 
 export default function Home() {
   const { isAuthenticated } = useAuth();
@@ -37,7 +37,7 @@ export default function Home() {
         {/*<NftsShowroom />*/}
         <div className={styles.bottomBar}>
           <div className={styles.bottomElement}>
-            {false ? <ProfileModal /> : <LoggedOut />}
+            {isAuthenticated ? <ProfileModal /> : <LoggedOut />}
           </div>
           <div className={styles.navigation}>
             <a className={styles.navigationElement} href="https://a4gq6-oaaaa-aaaab-qaa4q-cai.raw.icp0.io/?id=e45g2-taaaa-aaaan-qmn5q-cai">

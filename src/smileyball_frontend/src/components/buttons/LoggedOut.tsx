@@ -2,11 +2,16 @@
 
 import React from "react";
 import { useAuth } from "@/hooks/useAuthClient";
-import Image from "next/image";
 import styles from "./buttons.module.css";
 
 const LoggedOut = () => {
   const { login } = useAuth();
+
+  const handleLogin = (e) => {
+
+
+    login(e)
+  }
 
   return (
     <button

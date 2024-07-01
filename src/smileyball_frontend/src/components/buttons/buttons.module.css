@@ -1,26 +1,3 @@
-.loggedInWrapper {
-  display: flex;
-  flex-direction: column;
-  margin-left: 100px;
-}
-
-.loggedIn {
-  display: flex;
-  outline: none;
-  border: none;
-  background: none;
-}
-
-.loggedInText {
-  display: flex;
-  flex-direction: column;
-}
-
-.loggedInText p {
-  display: flex;
-  font-size: 14px;
-}
-
 .loggedOut {
   display: flex;
   width: 100%;

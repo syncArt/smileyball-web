@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "smileyBall_frontend",
+  "name": "smileyball_frontend",
   "version": "0.0.0",
   "scripts": {
     "dev": "NEXT_DEBUG=true next dev",

@@ -57,6 +57,7 @@ export const ProfileModal = () => {
               <li className={styles.navigationListItem}>LEADERBOARD</li>
               <li className={styles.navigationListItem}>TALENT TREE</li>
               <li className={styles.navigationListItem}>Connect with X</li>
+              <li className={styles.navigationListItem}>Connect with PLUG WALLET</li>
             </ul>
           </div>
           <div className={styles.profileBoxBottom}>

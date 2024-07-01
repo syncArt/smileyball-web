@@ -3,7 +3,11 @@
 
 import { AuthClient } from "@dfinity/auth-client";
 import React, { createContext, useContext, useEffect, useState } from "react";
-import {canisterId, createActor, CreateActorOptions} from "../../../declarations/smileyBall_backend";
+import {
+  canisterId,
+  createActor,
+  CreateActorOptions,
+} from "../../../declarations/smileyBall_backend";
 
 const AuthContext = createContext<any>(null);
 
@@ -38,6 +42,8 @@ export const defaultOptions = {
    */
   loginOptions: {
     identityProvider: getIdentityProvider(),
+    windowOpenerFeatures:
+      "toolbar=0,location=0,menubar=0,width=500,height=500,left=100,top=100",
   },
 };
 
@@ -66,12 +72,12 @@ export const useAuthClient = (options = defaultOptions) => {
     authClient.login({
       ...options.loginOptions,
       onSuccess: () => {
-        console.log('success!!!!!!', authClient)
+        console.log("success!!!!!!", authClient);
         updateClient(authClient);
       },
       onError: () => {
-        console.log('meh... ;/', authClient);
-      }
+        console.log("meh... ;/", authClient);
+      },
     });
   };
 

@@ -1,0 +1,6 @@
+type AccountIdentifier = record { "principal" : principal; subaccount : blob };
+service : {
+  account_to_text : () -> (text) query;
+  id_to_account : () -> (AccountIdentifier) query;
+  whoami : () -> (principal) query;
+}

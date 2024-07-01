@@ -1,19 +1,16 @@
 {
   "canisters": {
-    "smileyBall_backend": {
-      "main": "src/smileyBall_backend/main.mo",
-      "type": "motoko",
-      "id": "bd3sg-teaaa-aaaaa-qaaba-cai",
-      "declarations": {
-        "node_compatibility": true
-      }
+    "smileyball_backend": {
+      "candid": "src/smileyball_backend/smileyball_backend.did",
+      "package": "smileyball_backend",
+      "type": "rust"
     },
-    "smileyBall_frontend": {
+    "smileyball_frontend": {
       "dependencies": [
-        "smileyBall_backend"
+        "smileyball_backend"
       ],
       "source": [
-        "src/smileyBall_frontend/out"
+        "src/smileyball_frontend/out"
       ],
       "type": "assets",
       "id": "be2us-64aaa-aaaaa-qaabq-cai"
